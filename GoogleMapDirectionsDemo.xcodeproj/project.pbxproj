@@ -14,6 +14,7 @@
 		F054ABCF1DE5D2DD00AB9E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F054ABCE1DE5D2DD00AB9E8A /* Assets.xcassets */; };
 		F054ABD21DE5D2DD00AB9E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F054ABD01DE5D2DD00AB9E8A /* LaunchScreen.storyboard */; };
 		F054ABDA1DE5DAFD00AB9E8A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054ABD91DE5DAFD00AB9E8A /* ViewModel.swift */; };
+		F054ABDC1DE5DD5000AB9E8A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054ABDB1DE5DD5000AB9E8A /* Interactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F054ABD11DE5D2DD00AB9E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F054ABD31DE5D2DD00AB9E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F054ABD91DE5DAFD00AB9E8A /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F054ABDB1DE5DD5000AB9E8A /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +82,32 @@
 		F054ABC61DE5D2DD00AB9E8A /* GoogleMapDirectionsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F054ABC71DE5D2DD00AB9E8A /* AppDelegate.swift */,
+				F07D10681DE5E88B009FEDDD /* Assets */,
+				F054ABDB1DE5DD5000AB9E8A /* Interactor.swift */,
 				F054ABC91DE5D2DD00AB9E8A /* ViewController.swift */,
 				F054ABD91DE5DAFD00AB9E8A /* ViewModel.swift */,
 				F054ABCB1DE5D2DD00AB9E8A /* Main.storyboard */,
-				F054ABCE1DE5D2DD00AB9E8A /* Assets.xcassets */,
-				F054ABD01DE5D2DD00AB9E8A /* LaunchScreen.storyboard */,
-				F054ABD31DE5D2DD00AB9E8A /* Info.plist */,
+				F07D10671DE5E886009FEDDD /* Supporting Files */,
 			);
 			path = GoogleMapDirectionsDemo;
+			sourceTree = "<group>";
+		};
+		F07D10671DE5E886009FEDDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F054ABD31DE5D2DD00AB9E8A /* Info.plist */,
+				F054ABC71DE5D2DD00AB9E8A /* AppDelegate.swift */,
+				F054ABD01DE5D2DD00AB9E8A /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F07D10681DE5E88B009FEDDD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F054ABCE1DE5D2DD00AB9E8A /* Assets.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +236,7 @@
 			files = (
 				F054ABCA1DE5D2DD00AB9E8A /* ViewController.swift in Sources */,
 				F054ABDA1DE5DAFD00AB9E8A /* ViewModel.swift in Sources */,
+				F054ABDC1DE5DD5000AB9E8A /* Interactor.swift in Sources */,
 				F054ABC81DE5D2DD00AB9E8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

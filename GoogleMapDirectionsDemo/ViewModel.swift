@@ -9,5 +9,17 @@
 import Foundation
 
 class ViewModel {
+    // MARK: - Variable
+    private let interactor = Interactor()
+    
+    // MARK: - Function
+    func direction() {
+        interactor.directions(complete:
+                                {(response: [String: AnyObject]) in
+                                    print("Success")
+                                }, error: {() in
+                                    print("Error")
+        })
+    }
     
 }
