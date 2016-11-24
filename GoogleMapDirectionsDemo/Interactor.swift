@@ -22,12 +22,9 @@ class Interactor {
                           method: .get,
                           parameters: parameters)
             .responseJSON { response in
-                print("REQUEST: \(response.request)")
                 if let json = response.result.value {
-                    let response = json as! Dictionary<String, AnyObject>
-                    print(response)
-//                    let header = response["header"] as! Dictionary<String, AnyObject>
-//                    complete(header)
+                    let response = json as! Dictionary<String, AnyObject>                    
+                    complete(response)
                 } else {
                     error()
                 }

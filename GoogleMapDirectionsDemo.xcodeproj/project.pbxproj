@@ -15,6 +15,7 @@
 		F054ABD21DE5D2DD00AB9E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F054ABD01DE5D2DD00AB9E8A /* LaunchScreen.storyboard */; };
 		F054ABDA1DE5DAFD00AB9E8A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054ABD91DE5DAFD00AB9E8A /* ViewModel.swift */; };
 		F054ABDC1DE5DD5000AB9E8A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054ABDB1DE5DD5000AB9E8A /* Interactor.swift */; };
+		F0EF21521DE733D000326895 /* DirectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF21511DE733D000326895 /* DirectionItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F054ABD31DE5D2DD00AB9E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F054ABD91DE5DAFD00AB9E8A /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F054ABDB1DE5DD5000AB9E8A /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		F0EF21511DE733D000326895 /* DirectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				F07D10681DE5E88B009FEDDD /* Assets */,
+				F0EF21511DE733D000326895 /* DirectionItem.swift */,
 				F054ABDB1DE5DD5000AB9E8A /* Interactor.swift */,
 				F054ABC91DE5D2DD00AB9E8A /* ViewController.swift */,
 				F054ABD91DE5DAFD00AB9E8A /* ViewModel.swift */,
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0EF21521DE733D000326895 /* DirectionItem.swift in Sources */,
 				F054ABCA1DE5D2DD00AB9E8A /* ViewController.swift in Sources */,
 				F054ABDA1DE5DAFD00AB9E8A /* ViewModel.swift in Sources */,
 				F054ABDC1DE5DD5000AB9E8A /* Interactor.swift in Sources */,

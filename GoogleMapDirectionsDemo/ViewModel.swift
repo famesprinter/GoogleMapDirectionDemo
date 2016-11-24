@@ -16,7 +16,15 @@ class ViewModel {
     func direction() {
         interactor.directions(complete:
                                 {(response: [String: AnyObject]) in
-                                    print("Success")
+                                    let status = (response["status"] as? String) ?? ""
+                                    if status == "OK" {
+                                        let routesAr = (response["routes"] as? Array) ?? []
+                                        let routes = (routesAr.first as? Dictionary<String, AnyObject>) ?? [:]
+                                        let item = DirectionItem()
+                                        item.configureDirection(routes: routes)
+                                    } else {
+                                        print("Success With Error!!")
+                                    }
                                 }, error: {() in
                                     print("Error")
         })
