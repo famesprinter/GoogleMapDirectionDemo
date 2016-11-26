@@ -11,6 +11,7 @@ import Foundation
 class ViewModel {
     // MARK: - Variable
     private let interactor = Interactor()
+    private var direcItem = DirectionItem()
     
     // MARK: - Function
     func direction() {
@@ -22,6 +23,7 @@ class ViewModel {
                                         let routes = (routesAr.first as? Dictionary<String, AnyObject>) ?? [:]
                                         let item = DirectionItem()
                                         item.configureDirection(routes: routes)
+                                        self.direcItem = item
                                     } else {
                                         print("Success With Error!!")
                                     }
@@ -30,4 +32,7 @@ class ViewModel {
         })
     }
     
+    func directionData() -> (String, String, String) {
+        return (direcItem.distance, direcItem.duration, direcItem.polyline)
+    }
 }

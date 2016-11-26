@@ -12,7 +12,7 @@ import Alamofire
 class Interactor {
     func directions(complete: @escaping ([String: AnyObject]) -> (),
                     error: @escaping () -> ()) {
-        let parameters: Parameters = [ "origin": "18.781595,98.976140 ",
+        let parameters: Parameters = [ "origin": "18.781595,98.976140",
                                        "destination": "18.780579,98.978672",
                                        "mode": "driving",
                                        "key": ""] // Your API Key
