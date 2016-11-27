@@ -9,31 +9,38 @@
 import UIKit
 import GoogleMaps
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ViewModelDelegate {
     // MARK: - Variable
     let viewModel = ViewModel()
-    let latOrigin = 18.781595
-    let lngOrigin = 98.976140
-    let latDest = 18.780579
-    let lngDest = 98.978672
+    let latOrigin = 18.793865
+    let lngOrigin = 98.991551
+    let latDest = 18.781455
+    let lngDest = 98.988334
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Map Direction"
+        viewModel.configureDelegate(dg: self)
         viewModel.direction()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    // MARK: - ViewModel Delegate
+    func didDirectionSuccess() {
+        createDirectionMap()
+    }
+    
+    // MARK: - Create Direction Map
+    func createDirectionMap() {
+        // Create Map View
         let camera = GMSCameraPosition.camera(withLatitude: latOrigin,
                                               longitude: lngOrigin,
-                                              zoom: 15)
+                                              zoom: 16)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         self.view = mapView
         
+        // Create Maeker
         let positionOrigin = CLLocationCoordinate2DMake(latOrigin, lngOrigin)
         let markerOrigin = GMSMarker(position: positionOrigin)
         markerOrigin.title = "Location Origin"
@@ -43,6 +50,11 @@ class ViewController: UIViewController {
         let markerDest = GMSMarker(position: positionDest)
         markerDest.title = "Location Destination"
         markerDest.map = mapView
+        
+        // Create Routes
+        let path: GMSPath = GMSPath(fromEncodedPath: viewModel.directionPolyline())!
+        let routePolyline = GMSPolyline(path: path)
+        routePolyline.map = mapView
     }
 }
 

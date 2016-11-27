@@ -22,16 +22,19 @@ class DirectionItem {
         // Distance
         let distanceDic = (legsDic["distance"] as? Dictionary<String,AnyObject>) ?? [:]
         let dist = (distanceDic["text"] as? String) ?? ""
+        distance = dist
         print("DIST: \(dist)")
         
         // Duration
         let durationDic = (legsDic["duration"] as? Dictionary<String,AnyObject>) ?? [:]
-        let duration = (durationDic["text"] as? String) ?? ""
+        let dura = (durationDic["text"] as? String) ?? ""
+        duration = dura
         print("DURATION: \(duration)")
         
         // Overview Polyline
         let overviewPolyline = (routes["overview_polyline"] as? Dictionary<String,AnyObject>) ?? [:]
         let points = (overviewPolyline["points"] as? String) ?? ""
+        polyline = points
         print("POINTS: \(points)")
     }
     

@@ -10,10 +10,14 @@ import Foundation
 
 class ViewModel {
     // MARK: - Variable
+    private weak var delegate: ViewModelDelegate?
     private let interactor = Interactor()
     private var direcItem = DirectionItem()
     
     // MARK: - Function
+    func configureDelegate(dg: ViewModelDelegate) {
+        delegate = dg
+    }
     func direction() {
         interactor.directions(complete:
                                 {(response: [String: AnyObject]) in
@@ -21,9 +25,8 @@ class ViewModel {
                                     if status == "OK" {
                                         let routesAr = (response["routes"] as? Array) ?? []
                                         let routes = (routesAr.first as? Dictionary<String, AnyObject>) ?? [:]
-                                        let item = DirectionItem()
-                                        item.configureDirection(routes: routes)
-                                        self.direcItem = item
+                                        self.direcItem.configureDirection(routes: routes)
+                                        self.delegate?.didDirectionSuccess()
                                     } else {
                                         print("Success With Error!!")
                                     }
@@ -32,7 +35,7 @@ class ViewModel {
         })
     }
     
-    func directionData() -> (String, String, String) {
-        return (direcItem.distance, direcItem.duration, direcItem.polyline)
+    func directionPolyline() -> String {
+        return direcItem.polyline
     }
 }
