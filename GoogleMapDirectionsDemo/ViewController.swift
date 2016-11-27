@@ -54,6 +54,8 @@ class ViewController: UIViewController, ViewModelDelegate {
         // Create Routes
         let path: GMSPath = GMSPath(fromEncodedPath: viewModel.directionPolyline())!
         let routePolyline = GMSPolyline(path: path)
+        routePolyline.strokeColor = UIColor.red
+        routePolyline.strokeWidth = 8
         routePolyline.map = mapView
     }
 }
